@@ -91,13 +91,12 @@
 		19B46C341FBB0C4600792F29 /* theLott */ = {
 			isa = PBXGroup;
 			children = (
-				19B46C551FBB131600792F29 /* SupportingFiles */,
 				19B46C351FBB0C4600792F29 /* AppDelegate.swift */,
 				19B46C371FBB0C4600792F29 /* ViewController.swift */,
 				19B46C391FBB0C4600792F29 /* Main.storyboard */,
 				19B46C3C1FBB0C4600792F29 /* Assets.xcassets */,
 				19B46C3E1FBB0C4600792F29 /* LaunchScreen.storyboard */,
-				19B46C411FBB0C4600792F29 /* Info.plist */,
+				19B46C551FBB131600792F29 /* SupportingFiles */,
 			);
 			path = theLott;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 		19B46C551FBB131600792F29 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				19B46C411FBB0C4600792F29 /* Info.plist */,
 				19B46C561FBB133800792F29 /* response.json */,
 			);
 			path = SupportingFiles;
