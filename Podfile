@@ -6,6 +6,15 @@ target 'theLott' do
   use_frameworks!
 
   # Pods for theLott
+  
+  # Networking
+  pod 'Alamofire', '~> 4.5'
+  pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'SwiftyJSON'
+  
+  # UI
+  pod 'SVProgressHUD'
+  pod 'Kingfisher'
 
   target 'theLottTests' do
     inherit! :search_paths

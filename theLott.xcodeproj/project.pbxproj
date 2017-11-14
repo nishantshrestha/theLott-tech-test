@@ -15,6 +15,7 @@
 		19B46C4B1FBB0C4600792F29 /* theLottTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C4A1FBB0C4600792F29 /* theLottTests.swift */; };
 		19B46C571FBB133800792F29 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B46C561FBB133800792F29 /* response.json */; };
 		19B46C5A1FBB141A00792F29 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C591FBB141A00792F29 /* Result.swift */; };
+		19B46C5D1FBB17A700792F29 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C5C1FBB17A700792F29 /* Company.swift */; };
 		7BF5DA70660B777FB92DBA2F /* Pods_theLottTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9C53F8D2914A38766AE7F /* Pods_theLottTests.framework */; };
 		DC1FE530C43594F524B12ACB /* Pods_theLott.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668213BB8993B647422547BF /* Pods_theLott.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		19B46C4C1FBB0C4600792F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B46C561FBB133800792F29 /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		19B46C591FBB141A00792F29 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		19B46C5C1FBB17A700792F29 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		51B84B2D898F5D02677E671F /* Pods-theLottTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theLottTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theLottTests/Pods-theLottTests.debug.xcconfig"; sourceTree = "<group>"; };
 		668213BB8993B647422547BF /* Pods_theLott.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theLott.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA9C53F8D2914A38766AE7F /* Pods_theLottTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theLottTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				19B46C591FBB141A00792F29 /* Result.swift */,
+				19B46C5C1FBB17A700792F29 /* Company.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				19B46C5A1FBB141A00792F29 /* Result.swift in Sources */,
 				19B46C381FBB0C4600792F29 /* ViewController.swift in Sources */,
 				19B46C361FBB0C4600792F29 /* AppDelegate.swift in Sources */,
+				19B46C5D1FBB17A700792F29 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
