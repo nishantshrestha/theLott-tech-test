@@ -12,6 +12,7 @@ struct MockCompanyService: CompanyService {
     
     var state: SuccessfulState
     
+    // Allow configuration of MockCompanyService to return empty array as response.
     init(expectedState: SuccessfulState = .some) {
         self.state = expectedState
     }
