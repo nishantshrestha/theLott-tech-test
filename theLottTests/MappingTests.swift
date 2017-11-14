@@ -23,7 +23,7 @@ class MappingTests: XCTestCase {
         
             let responseJSON = try JSON(data: rawJSONData)
             
-            // Try and map the JSON response to array of Company model objects
+            // Map the JSON response to array of Company
             let companies = Mapper<Company>().mapArray(JSONObject: responseJSON["Companies"].arrayObject)
             
             XCTAssertNotNil(companies, "Companies should not be nil")
