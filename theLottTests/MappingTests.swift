@@ -13,23 +13,13 @@ import ObjectMapper
 class MappingTests: XCTestCase {
     
     func testSuccessfullyMapsJSONToCompaniesArray() {
-        // Read from JSON file in the bundle
-        guard let path = Bundle.main.path(forResource: "response", ofType: "json") else {
-                XCTFail("Response JSON file not found")
-                return
-            }
-        do {
-            let rawJSONData = try Data(contentsOf: URL(fileURLWithPath: path))
         
-            let responseJSON = try JSON(data: rawJSONData)
-            
-            // Map the JSON response to array of Company
-            let companies = Mapper<Company>().mapArray(JSONObject: responseJSON["Companies"].arrayObject)
-            
-            XCTAssertNotNil(companies, "Companies should not be nil")
-        } catch {
-            XCTFail("Could not read from JSON file")
+        guard let companies = MockData().getCompanies() else {
+            XCTFail("Companies should not be nil")
+            return
         }
+        
+        XCTAssertTrue(companies.count == 5, "Companies count(\(companies.count)) should be equal to 5.")
     }
     
 }
