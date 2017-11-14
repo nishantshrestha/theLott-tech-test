@@ -11,10 +11,10 @@ import ObjectMapper
 
 struct Company: Mappable {
     
-    let id: String!
-    let displayName: String!
-    let description: String!
-    let logoURL: String!
+    var id: String!
+    var displayName: String!
+    var description: String!
+    var logoURL: String!
     
     init?(map: Map) {
         
