@@ -20,6 +20,11 @@
 		19B46C601FBB1C9300792F29 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C5C1FBB17A700792F29 /* Company.swift */; };
 		19B46C611FBB1C9600792F29 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C591FBB141A00792F29 /* Result.swift */; };
 		19B46C621FBB1D0700792F29 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B46C561FBB133800792F29 /* response.json */; };
+		19B46C651FBB26AF00792F29 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C641FBB26AF00792F29 /* CompanyService.swift */; };
+		19B46C661FBB26AF00792F29 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C641FBB26AF00792F29 /* CompanyService.swift */; };
+		19B46C6C1FBB274900792F29 /* MockCompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C6B1FBB274900792F29 /* MockCompanyService.swift */; };
+		19B46C6E1FBB275900792F29 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C6D1FBB275900792F29 /* MockData.swift */; };
+		19B46C711FBB309600792F29 /* SuccessfulState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C701FBB309600792F29 /* SuccessfulState.swift */; };
 		7BF5DA70660B777FB92DBA2F /* Pods_theLottTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9C53F8D2914A38766AE7F /* Pods_theLottTests.framework */; };
 		DC1FE530C43594F524B12ACB /* Pods_theLott.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668213BB8993B647422547BF /* Pods_theLott.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +54,10 @@
 		19B46C591FBB141A00792F29 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		19B46C5C1FBB17A700792F29 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		19B46C5E1FBB1C4800792F29 /* MappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingTests.swift; sourceTree = "<group>"; };
+		19B46C641FBB26AF00792F29 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
+		19B46C6B1FBB274900792F29 /* MockCompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCompanyService.swift; sourceTree = "<group>"; };
+		19B46C6D1FBB275900792F29 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		19B46C701FBB309600792F29 /* SuccessfulState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulState.swift; sourceTree = "<group>"; };
 		51B84B2D898F5D02677E671F /* Pods-theLottTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theLottTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theLottTests/Pods-theLottTests.debug.xcconfig"; sourceTree = "<group>"; };
 		668213BB8993B647422547BF /* Pods_theLott.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theLott.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA9C53F8D2914A38766AE7F /* Pods_theLottTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theLottTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,9 +124,12 @@
 		19B46C491FBB0C4600792F29 /* theLottTests */ = {
 			isa = PBXGroup;
 			children = (
+				19B46C6F1FBB308B00792F29 /* Models */,
+				19B46C6A1FBB273B00792F29 /* Services */,
 				19B46C4A1FBB0C4600792F29 /* theLottTests.swift */,
 				19B46C4C1FBB0C4600792F29 /* Info.plist */,
 				19B46C5E1FBB1C4800792F29 /* MappingTests.swift */,
+				19B46C6D1FBB275900792F29 /* MockData.swift */,
 			);
 			path = theLottTests;
 			sourceTree = "<group>";
@@ -143,8 +155,25 @@
 		19B46C631FBB260400792F29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				19B46C641FBB26AF00792F29 /* CompanyService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		19B46C6A1FBB273B00792F29 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19B46C6B1FBB274900792F29 /* MockCompanyService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		19B46C6F1FBB308B00792F29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19B46C701FBB309600792F29 /* SuccessfulState.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5DBBB59CAE96A7992947D99E /* Frameworks */ = {
@@ -373,6 +402,7 @@
 			files = (
 				19B46C5A1FBB141A00792F29 /* Result.swift in Sources */,
 				19B46C381FBB0C4600792F29 /* ViewController.swift in Sources */,
+				19B46C651FBB26AF00792F29 /* CompanyService.swift in Sources */,
 				19B46C361FBB0C4600792F29 /* AppDelegate.swift in Sources */,
 				19B46C5D1FBB17A700792F29 /* Company.swift in Sources */,
 			);
@@ -383,8 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B46C5F1FBB1C4800792F29 /* MappingTests.swift in Sources */,
+				19B46C711FBB309600792F29 /* SuccessfulState.swift in Sources */,
+				19B46C6C1FBB274900792F29 /* MockCompanyService.swift in Sources */,
 				19B46C4B1FBB0C4600792F29 /* theLottTests.swift in Sources */,
+				19B46C661FBB26AF00792F29 /* CompanyService.swift in Sources */,
 				19B46C611FBB1C9600792F29 /* Result.swift in Sources */,
+				19B46C6E1FBB275900792F29 /* MockData.swift in Sources */,
 				19B46C601FBB1C9300792F29 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
