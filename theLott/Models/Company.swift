@@ -16,6 +16,13 @@ struct Company: Mappable {
     var description: String!
     var logoURL: String!
     
+    init(id: String, displayName: String, description: String, logoURL: String) {
+        self.id = id
+        self.displayName = displayName
+        self.description = description
+        self.logoURL = logoURL
+    }
+    
     init?(map: Map) {
         
     }
