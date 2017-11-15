@@ -10,7 +10,8 @@ import XCTest
 @testable import theLott
 
 class CompaniesTableViewModelTests: XCTestCase {
-        
+    
+    // Test that the view model returns correct row count when dealing with an empty data set.
     func testViewModelCorrectlyHandlesEmptyCompaniesArray() {
         
         let service = ServiceFactory.mockEmptyCompaniesService
@@ -19,6 +20,7 @@ class CompaniesTableViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 0, "Number of rows should be 0.")
     }
     
+    // Test that the view model returns correct row count when dealing with non-empty data set.
     func testViewModelCorrectlyHandlesNonEmptyCompaniesArray() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
@@ -27,6 +29,7 @@ class CompaniesTableViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 5, "Number of rows should be 5.")
     }
     
+    // Test that the view model returns correct row count when dealing with an erroneous data set; and also sets the correct error message.
     func testViewModelCorrectlyHandlesErrorState() {
         
         let service = ServiceFactory.mockFailingCompaniesService
@@ -36,11 +39,14 @@ class CompaniesTableViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 0, "Number of rows should be 0.")
     }
     
-    func testViewModelCorrectlyMapsCompaniesToCompaniesViewModel() {
+    // Test that the CompaniesTableViewModel contains an array of correctly mapped CompanyViewModels.
+    func testViewModelContainsCorrectlyMappedCompanyViewModels() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
         
         let viewModel = CompaniesTableViewModel(service: service)
+        
+        XCTAssertTrue(viewModel.companyViewModels.count == 5, "Company view model count should be 5.")
         
         if let firstCompanyViewModel = viewModel.companyViewModels.first {
             XCTAssertEqual(firstCompanyViewModel.description, "QLD Residents", "First company view model description does not match.")
@@ -54,6 +60,7 @@ class CompaniesTableViewModelTests: XCTestCase {
         }
     }
     
+    // Test that the delegate function gets called when the companies are successfully fetched.
     func testViewModelDelegateMethodGetsCalled() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
