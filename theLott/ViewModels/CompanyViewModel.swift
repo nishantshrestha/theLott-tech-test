@@ -25,3 +25,9 @@ class CompanyViewModel {
     }
     
 }
+
+extension CompanyViewModel: Equatable {
+    static func ==(lhs: CompanyViewModel , rhs: CompanyViewModel) -> Bool {
+        return lhs.company == rhs.company
+    }
+}

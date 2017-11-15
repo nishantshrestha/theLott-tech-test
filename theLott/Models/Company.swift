@@ -27,3 +27,12 @@ struct Company: Mappable {
         logoURL <- map["CompanyLogoUrl"]
     }
 }
+
+extension Company: Equatable {
+    static func ==(lhs: Company, rhs: Company) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.displayName == rhs.displayName
+            && lhs.description == rhs.description
+            && lhs.logoURL == rhs.logoURL
+    }
+}
