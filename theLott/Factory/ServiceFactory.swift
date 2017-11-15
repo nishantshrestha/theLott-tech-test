@@ -21,10 +21,12 @@ struct ServiceFactory {
         return MockCompanyService(expectedState: .empty)
     }
     
+    // Mock company service that returns an empty [Company] array and an error message
     static var mockFailingCompaniesService: CompanyService {
         return MockCompanyService(expectedState: .failure("Something went wrong while fetching companies."))
     }
     
+    // Production company service
     static var productionCompaniesService: CompanyService {
         return AlamofireCompanyService()
     }
