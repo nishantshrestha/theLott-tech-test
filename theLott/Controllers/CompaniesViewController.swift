@@ -36,6 +36,9 @@ class CompaniesViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
 
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        companiesTableViewModel.fetchCompanies()
+    }
 }
 
 extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
