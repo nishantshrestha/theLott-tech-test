@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SVProgressHUD
 
 class CompaniesViewController: UIViewController {
 
@@ -19,6 +20,8 @@ class CompaniesViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        
+        showLoadingUI()
         
         companiesTableViewModel = CompaniesTableViewModel(service: ServiceFactory.productionCompaniesService)
         companiesTableViewModel.delegate = self
@@ -37,7 +40,16 @@ class CompaniesViewController: UIViewController {
     }
 
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        showLoadingUI()
         companiesTableViewModel.fetchCompanies()
+    }
+    
+    private func showLoadingUI() {
+        SVProgressHUD.show(withStatus: "Fetching companies...")
+    }
+    
+    private func hideLoadingUI() {
+        SVProgressHUD.dismiss()
     }
 }
 
@@ -63,10 +75,15 @@ extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension CompaniesViewController: CompaniesTableViewModelDelegate {
     func didUpdateCompanyViewModels() {
-        self.tableView.reloadData()
+        hideLoadingUI()
+        
+        tableView.reloadData()
     }
     
     func didEncounterError() {
+        
+        hideLoadingUI()
+        
         if let errorMessage = companiesTableViewModel.errorMessage {
             // show error alert
             let alertView = UIAlertController(title: "theLott", message: errorMessage, preferredStyle: .alert)
