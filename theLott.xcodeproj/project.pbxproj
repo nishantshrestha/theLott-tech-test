@@ -12,6 +12,8 @@
 		1920613E1FBBD82900898FAC /* AlamofireCompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920613C1FBBD6D300898FAC /* AlamofireCompanyService.swift */; };
 		192061401FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920613F1FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift */; };
 		192061411FBBDE1800898FAC /* MockCompaniesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920613F1FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift */; };
+		197DEAF41FBC8C8900CFA2BE /* JSONMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DEAF31FBC8C8900CFA2BE /* JSONMappingTests.swift */; };
+		197DEAF61FBC8DE900CFA2BE /* CompanyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DEAF51FBC8DE900CFA2BE /* CompanyViewModelTests.swift */; };
 		19A7A8341FBBEE5500C7C96D /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7A8331FBBEE5500C7C96D /* CompaniesViewController.swift */; };
 		19A7A8351FBBEE5500C7C96D /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7A8331FBBEE5500C7C96D /* CompaniesViewController.swift */; };
 		19A7A8381FBBEEC800C7C96D /* CompaniesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A7A8371FBBEEC800C7C96D /* CompaniesViewController.storyboard */; };
@@ -21,7 +23,7 @@
 		19B46C361FBB0C4600792F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C351FBB0C4600792F29 /* AppDelegate.swift */; };
 		19B46C3D1FBB0C4600792F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B46C3C1FBB0C4600792F29 /* Assets.xcassets */; };
 		19B46C401FBB0C4600792F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B46C3E1FBB0C4600792F29 /* LaunchScreen.storyboard */; };
-		19B46C4B1FBB0C4600792F29 /* theLottTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C4A1FBB0C4600792F29 /* theLottTests.swift */; };
+		19B46C4B1FBB0C4600792F29 /* CompaniesTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C4A1FBB0C4600792F29 /* CompaniesTableViewModelTests.swift */; };
 		19B46C571FBB133800792F29 /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B46C561FBB133800792F29 /* response.json */; };
 		19B46C5A1FBB141A00792F29 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C591FBB141A00792F29 /* Result.swift */; };
 		19B46C5D1FBB17A700792F29 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B46C5C1FBB17A700792F29 /* Company.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		1920613C1FBBD6D300898FAC /* AlamofireCompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireCompanyService.swift; sourceTree = "<group>"; };
 		1920613F1FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCompaniesTableViewDelegate.swift; sourceTree = "<group>"; };
+		197DEAF31FBC8C8900CFA2BE /* JSONMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappingTests.swift; sourceTree = "<group>"; };
+		197DEAF51FBC8DE900CFA2BE /* CompanyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModelTests.swift; sourceTree = "<group>"; };
 		19A7A8331FBBEE5500C7C96D /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
 		19A7A8371FBBEEC800C7C96D /* CompaniesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompaniesViewController.storyboard; sourceTree = "<group>"; };
 		19A7A83C1FBBF7EA00C7C96D /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		19B46C3F1FBB0C4600792F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B46C411FBB0C4600792F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B46C461FBB0C4600792F29 /* theLottTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = theLottTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19B46C4A1FBB0C4600792F29 /* theLottTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theLottTests.swift; sourceTree = "<group>"; };
+		19B46C4A1FBB0C4600792F29 /* CompaniesTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewModelTests.swift; sourceTree = "<group>"; };
 		19B46C4C1FBB0C4600792F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B46C561FBB133800792F29 /* response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		19B46C591FBB141A00792F29 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -107,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		197DEAF21FBC82AA00CFA2BE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				197DEAF51FBC8DE900CFA2BE /* CompanyViewModelTests.swift */,
+				19B46C4A1FBB0C4600792F29 /* CompaniesTableViewModelTests.swift */,
+				197DEAF31FBC8C8900CFA2BE /* JSONMappingTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		19A7A8321FBBEE1F00C7C96D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +214,7 @@
 				19B46C6A1FBB273B00792F29 /* Services */,
 				19A7A8401FBC197B00C7C96D /* Delegate */,
 				19A7A83F1FBC196E00C7C96D /* Data */,
-				19B46C4A1FBB0C4600792F29 /* theLottTests.swift */,
+				197DEAF21FBC82AA00CFA2BE /* Tests */,
 				19B46C4C1FBB0C4600792F29 /* Info.plist */,
 			);
 			path = theLottTests;
@@ -514,15 +528,17 @@
 			files = (
 				19B46C711FBB309600792F29 /* ExpectedState.swift in Sources */,
 				19B46C6C1FBB274900792F29 /* MockCompanyService.swift in Sources */,
-				19B46C4B1FBB0C4600792F29 /* theLottTests.swift in Sources */,
+				19B46C4B1FBB0C4600792F29 /* CompaniesTableViewModelTests.swift in Sources */,
 				19A7A83E1FBBF7EA00C7C96D /* CompanyCell.swift in Sources */,
 				1920613E1FBBD82900898FAC /* AlamofireCompanyService.swift in Sources */,
 				19A7A8351FBBEE5500C7C96D /* CompaniesViewController.swift in Sources */,
+				197DEAF41FBC8C8900CFA2BE /* JSONMappingTests.swift in Sources */,
 				19B46C661FBB26AF00792F29 /* CompanyService.swift in Sources */,
 				19B46C611FBB1C9600792F29 /* Result.swift in Sources */,
 				19B46C6E1FBB275900792F29 /* MockData.swift in Sources */,
 				192061401FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift in Sources */,
 				19B46C801FBB3F3200792F29 /* CompaniesTableViewModel.swift in Sources */,
+				197DEAF61FBC8DE900CFA2BE /* CompanyViewModelTests.swift in Sources */,
 				19B46C601FBB1C9300792F29 /* Company.swift in Sources */,
 				1920613B1FBBCCBA00898FAC /* CompanyViewModel.swift in Sources */,
 				19B46C751FBB34FA00792F29 /* ServiceFactory.swift in Sources */,

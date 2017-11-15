@@ -9,19 +9,9 @@
 import XCTest
 @testable import theLott
 
-class theLottTests: XCTestCase {
-    
-    func testSuccessfullyMapsJSONToCompaniesArray() {
+class CompaniesTableViewModelTests: XCTestCase {
         
-        guard let companies = MockData().getCompanies() else {
-            XCTFail("Companies should not be nil")
-            return
-        }
-        
-        XCTAssertTrue(companies.count == 5, "Companies count(\(companies.count)) should be equal to 5.")
-    }
-    
-    func testTableViewModelCorrectlyHandlesEmptyCompaniesArray() {
+    func testViewModelCorrectlyHandlesEmptyCompaniesArray() {
         
         let service = ServiceFactory.mockEmptyCompaniesService
         let viewModel = CompaniesTableViewModel(service: service)
@@ -29,7 +19,7 @@ class theLottTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 0, "Number of rows should be 0.")
     }
     
-    func testTableViewModelCorrectlyHandlesNonEmptyCompaniesArray() {
+    func testViewModelCorrectlyHandlesNonEmptyCompaniesArray() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
         let viewModel = CompaniesTableViewModel(service: service)
@@ -37,7 +27,7 @@ class theLottTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 5, "Number of rows should be 5.")
     }
     
-    func testTableViewModelCorrectlyHandlesErrorState() {
+    func testViewModelCorrectlyHandlesErrorState() {
         
         let service = ServiceFactory.mockFailingCompaniesService
         let viewModel = CompaniesTableViewModel(service: service)
@@ -46,7 +36,7 @@ class theLottTests: XCTestCase {
         XCTAssertTrue(viewModel.getNumberOfRowsInSection(section: 0) == 0, "Number of rows should be 0.")
     }
     
-    func testTableViewModelCorrectlyMapsCompaniesToCompaniesViewModel() {
+    func testViewModelCorrectlyMapsCompaniesToCompaniesViewModel() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
         
@@ -64,7 +54,7 @@ class theLottTests: XCTestCase {
         }
     }
     
-    func testTableViewModelDelegateMethodGetsCalled() {
+    func testViewModelDelegateMethodGetsCalled() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
         let viewModel = CompaniesTableViewModel(service: service)
