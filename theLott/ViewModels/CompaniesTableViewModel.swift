@@ -8,13 +8,23 @@
 
 import Foundation
 
+protocol CompaniesTableViewModelDelegate: class {
+    func didUpdateCompanyViewModels(companyViewModels: [CompanyViewModel])
+}
+
 class CompaniesTableViewModel {
     
     let service: CompanyService
     
-    var companyViewModels: [CompanyViewModel] = []
+    var companyViewModels: [CompanyViewModel] = [] {
+        didSet {
+            delegate?.didUpdateCompanyViewModels(companyViewModels: companyViewModels)
+        }
+    }
     
     var errorMessage: String?
+    
+    weak var delegate: CompaniesTableViewModelDelegate?
     
     init(service: CompanyService) {
         self.service = service
