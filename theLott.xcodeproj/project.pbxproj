@@ -139,6 +139,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		19A7A83F1FBC196E00C7C96D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				19B46C6D1FBB275900792F29 /* MockData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		19A7A8401FBC197B00C7C96D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1920613F1FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		19B46C291FBB0C4600792F29 = {
 			isa = PBXGroup;
 			children = (
@@ -182,10 +198,10 @@
 			children = (
 				19B46C6F1FBB308B00792F29 /* Models */,
 				19B46C6A1FBB273B00792F29 /* Services */,
+				19A7A8401FBC197B00C7C96D /* Delegate */,
+				19A7A83F1FBC196E00C7C96D /* Data */,
 				19B46C4A1FBB0C4600792F29 /* theLottTests.swift */,
-				19B46C6D1FBB275900792F29 /* MockData.swift */,
 				19B46C4C1FBB0C4600792F29 /* Info.plist */,
-				1920613F1FBBDDF500898FAC /* MockCompaniesTableViewDelegate.swift */,
 			);
 			path = theLottTests;
 			sourceTree = "<group>";
