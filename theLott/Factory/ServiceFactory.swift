@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Define dependencies
+// Defines dependencies
 struct ServiceFactory {
     
     // Mock company service that returns a non-empty [Company] array
