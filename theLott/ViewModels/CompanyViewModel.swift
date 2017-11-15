@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CompanyViewModel {
+class CompanyViewModel {
     
     private var company: Company
     
@@ -19,4 +19,9 @@ struct CompanyViewModel {
     var logoURL: URL? {
         return URL(string: company.logoURL)
     }
+    
+    var description: String {
+        return company.description
+    }
+    
 }
