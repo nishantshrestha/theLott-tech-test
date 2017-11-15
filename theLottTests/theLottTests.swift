@@ -39,7 +39,7 @@ class theLottTests: XCTestCase {
     
     func testTableViewModelCorrectlyHandlesErrorState() {
         
-        let service = ServiceFactory.mockFailingComapnyService
+        let service = ServiceFactory.mockFailingCompaniesService
         let viewModel = CompaniesTableViewModel(service: service)
         
         XCTAssertEqual(viewModel.errorMessage, "Something went wrong while fetching companies.", "View model should have the specified error message.")
@@ -49,6 +49,7 @@ class theLottTests: XCTestCase {
     func testTableViewModelCorrectlyMapsCompaniesToCompaniesViewModel() {
         
         let service = ServiceFactory.mockNonEmptyCompaniesService
+        
         let viewModel = CompaniesTableViewModel(service: service)
         
         if let firstCompanyViewModel = viewModel.companyViewModels.first {
@@ -61,6 +62,19 @@ class theLottTests: XCTestCase {
             
             XCTAssertEqual(url, URL(string: "http://tim.media.tatts.com/TattsServices/Lotto/Companies/GoldenCasket_v1.png")!, "First company view model URL is incorrect")
         }
+    }
+    
+    func testTableViewModelDelegateMethodGetsCalled() {
+        
+        let service = ServiceFactory.mockNonEmptyCompaniesService
+        let viewModel = CompaniesTableViewModel(service: service)
+        let mockDelegate = MockCompaniesTableViewDelegate()
+        viewModel.delegate = mockDelegate
+        
+        viewModel.fetchCompanies() // I am refetching companies because the didSet operation happens instantaneously(during initialisation of the viewmodel) when using the mocked company service. This results in the delegate not being set until AFTER the didSet invocation and delegate methods not being called.
+        
+        XCTAssertTrue(mockDelegate.delegateMethodWasCalled, "Delegate method was not called.")
+        XCTAssertEqual(mockDelegate.companyViewModels, viewModel.companyViewModels, "Company view models do not match.")
     }
     
 }
