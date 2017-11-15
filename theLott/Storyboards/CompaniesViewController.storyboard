@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cOq-k1-D6y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,10 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="NmZ-tl-xS3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-Yx-xl4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="companyCell" id="oBc-8Y-5v0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBc-8Y-5v0" id="vNV-8h-Xj0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cLr-oY-JSG" firstAttribute="bottom" secondItem="NaN-Yx-xl4" secondAttribute="bottom" id="QpX-4Y-97e"/>
+                            <constraint firstItem="cLr-oY-JSG" firstAttribute="trailing" secondItem="NaN-Yx-xl4" secondAttribute="trailing" id="YGM-0h-GXx"/>
+                            <constraint firstItem="NaN-Yx-xl4" firstAttribute="leading" secondItem="cLr-oY-JSG" secondAttribute="leading" id="aZM-qa-uZo"/>
+                            <constraint firstItem="NaN-Yx-xl4" firstAttribute="top" secondItem="cLr-oY-JSG" secondAttribute="top" id="zCF-ST-eRJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cLr-oY-JSG"/>
                     </view>
                     <navigationItem key="navigationItem" title="theLott" id="Kee-jO-gtO"/>
+                    <connections>
+                        <outlet property="tableView" destination="NaN-Yx-xl4" id="hle-2Q-cY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKa-Ad-8cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
