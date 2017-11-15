@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CompanyService {
-    func getCompanies(completionHandler: (Result<[Company]>) -> ())
+    func getCompanies(completionHandler: @escaping (Result<[Company]>) -> ())
 }

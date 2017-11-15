@@ -17,7 +17,7 @@ struct MockCompanyService: CompanyService {
         self.state = expectedState
     }
     
-    func getCompanies(completionHandler: (Result<[Company]>) -> ()) {
+    func getCompanies(completionHandler: @escaping (Result<[Company]>) -> ()) {
         switch state {
             case .empty: completionHandler(.success([]))
             case .some: completionHandler(.success(MockData().getCompanies() ?? []))
