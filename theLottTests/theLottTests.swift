@@ -74,7 +74,6 @@ class theLottTests: XCTestCase {
         viewModel.fetchCompanies() // I am refetching companies because the didSet operation happens instantaneously(during initialisation of the viewmodel) when using the mocked company service. This results in the delegate not being set until AFTER the didSet invocation and delegate methods not being called.
         
         XCTAssertTrue(mockDelegate.delegateMethodWasCalled, "Delegate method was not called.")
-        XCTAssertEqual(mockDelegate.companyViewModels, viewModel.companyViewModels, "Company view models do not match.")
     }
     
 }
