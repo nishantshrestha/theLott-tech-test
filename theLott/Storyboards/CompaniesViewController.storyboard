@@ -20,15 +20,42 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-Yx-xl4">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95283776521682739" green="0.95300072431564331" blue="0.95282751321792603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="companyCell" id="oBc-8Y-5v0">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="companyCell" rowHeight="80" id="oBc-8Y-5v0" customClass="CompanyCell" customModule="theLott" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oBc-8Y-5v0" id="vNV-8h-Xj0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa5-zh-d8e">
+                                                    <rect key="frame" x="150" y="30" width="205" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_company" translatesAutoresizingMaskIntoConstraints="NO" id="V5Z-Ar-7sx">
+                                                    <rect key="frame" x="10" y="8" width="120" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="KyU-F6-N4j"/>
+                                                        <constraint firstAttribute="width" constant="120" id="yy5-n5-6OZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V5Z-Ar-7sx" firstAttribute="top" secondItem="vNV-8h-Xj0" secondAttribute="top" constant="8" id="9qD-Xu-v8q"/>
+                                                <constraint firstAttribute="bottom" secondItem="V5Z-Ar-7sx" secondAttribute="bottom" constant="8" id="EkR-v1-F8f"/>
+                                                <constraint firstAttribute="trailing" secondItem="pa5-zh-d8e" secondAttribute="trailing" constant="20" id="L2R-kn-Yvm"/>
+                                                <constraint firstItem="pa5-zh-d8e" firstAttribute="leading" secondItem="V5Z-Ar-7sx" secondAttribute="trailing" constant="20" id="PWU-yH-0dj"/>
+                                                <constraint firstItem="V5Z-Ar-7sx" firstAttribute="leading" secondItem="vNV-8h-Xj0" secondAttribute="leading" constant="10" id="bcW-DO-A4G"/>
+                                                <constraint firstItem="pa5-zh-d8e" firstAttribute="centerY" secondItem="V5Z-Ar-7sx" secondAttribute="centerY" id="nM2-rG-ER9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logoImageView" destination="V5Z-Ar-7sx" id="1QX-3F-zA5"/>
+                                            <outlet property="nameLabel" destination="pa5-zh-d8e" id="HX2-nu-2Cg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -70,4 +97,7 @@
             <point key="canvasLocation" x="-201" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder_company" width="75" height="31"/>
+    </resources>
 </document>
