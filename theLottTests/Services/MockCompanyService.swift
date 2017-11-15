@@ -10,10 +10,10 @@ import Foundation
 
 struct MockCompanyService: CompanyService {
     
-    var state: SuccessfulState
+    var state: ExpectedState
     
     // Allow configuration of MockCompanyService to return empty array as response.
-    init(expectedState: SuccessfulState = .some) {
+    init(expectedState: ExpectedState = .some) {
         self.state = expectedState
     }
     
@@ -21,6 +21,8 @@ struct MockCompanyService: CompanyService {
         switch state {
             case .empty: completionHandler(.success([]))
             case .some: completionHandler(.success(MockData().getCompanies() ?? []))
+            case .failure(let error): completionHandler(.error(error))
+                
         }
     }
 }
