@@ -48,14 +48,8 @@ extension CompaniesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let viewModel = companiesTableViewModel.companyViewModels[indexPath.row]
-        cell.textLabel?.text = viewModel.description
-        if let logoURL = viewModel.logoURL {
-            cell.imageView?.kf.setImage(with: viewModel.logoURL)
-        } else {
-            cell.imageView?.image = nil
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "companyCell", for: indexPath) as? CompanyCell else { return UITableViewCell() }
+        cell.companyViewModel = companiesTableViewModel.companyViewModels[indexPath.row]
         return cell
     }
     
