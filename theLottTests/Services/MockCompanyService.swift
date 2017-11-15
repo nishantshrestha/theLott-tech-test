@@ -22,7 +22,6 @@ struct MockCompanyService: CompanyService {
             case .empty: completionHandler(.success([]))
             case .some: completionHandler(.success(MockData().getCompanies() ?? []))
             case .failure(let error): completionHandler(.error(error))
-                
         }
     }
 }
