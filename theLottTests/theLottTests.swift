@@ -11,26 +11,14 @@ import XCTest
 
 class theLottTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testSuccessfullyMapsJSONToCompaniesArray() {
+        
+        guard let companies = MockData().getCompanies() else {
+            XCTFail("Companies should not be nil")
+            return
         }
+        
+        XCTAssertTrue(companies.count == 5, "Companies count(\(companies.count)) should be equal to 5.")
     }
     
 }
