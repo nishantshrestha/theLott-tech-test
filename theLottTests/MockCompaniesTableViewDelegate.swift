@@ -9,18 +9,15 @@
 import Foundation
 
 class MockCompaniesTableViewDelegate {
-    
     var delegateMethodWasCalled = false
-    var companyViewModels: [CompanyViewModel] = []
+    var errorEncountered = false
 }
 
 extension MockCompaniesTableViewDelegate: CompaniesTableViewModelDelegate {
-    func didUpdateCompanyViewModels(companyViewModels: [CompanyViewModel]) {
-        print("-------")
-        print("hello what is going on")
-        print(companyViewModels)
-        print("--------")
+    func didUpdateCompanyViewModels() {
         self.delegateMethodWasCalled = true
-        self.companyViewModels = companyViewModels
+    }
+    func didEncounterError() {
+        self.errorEncountered = true
     }
 }
