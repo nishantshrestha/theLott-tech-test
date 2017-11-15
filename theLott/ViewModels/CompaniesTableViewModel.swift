@@ -9,7 +9,8 @@
 import Foundation
 
 protocol CompaniesTableViewModelDelegate: class {
-    func didUpdateCompanyViewModels(companyViewModels: [CompanyViewModel])
+    func didUpdateCompanyViewModels()
+    func didEncounterError()
 }
 
 class CompaniesTableViewModel {
@@ -18,11 +19,15 @@ class CompaniesTableViewModel {
     
     var companyViewModels: [CompanyViewModel] = [] {
         didSet {
-            delegate?.didUpdateCompanyViewModels(companyViewModels: companyViewModels)
+            delegate?.didUpdateCompanyViewModels()
         }
     }
     
-    var errorMessage: String?
+    var errorMessage: String? {
+        didSet {
+            delegate?.didEncounterError()
+        }
+    }
     
     weak var delegate: CompaniesTableViewModelDelegate?
     
