@@ -20,7 +20,6 @@ struct AlamofireCompanyService: CompanyService {
                 if let data = response.data {
                     do {
                         let responseJSON = try JSON(data: data)
-                        print(responseJSON)
                         if let success = responseJSON["Success"].bool {
                             if success {
                                 guard let companies = Mapper<Company>().mapArray(JSONObject: responseJSON["Companies"].arrayObject) else {
